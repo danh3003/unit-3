@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thành Viên - Website Nhóm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- THANH ĐIỀU HƯỚNG (TASKBAR) -->
+    <nav class="navbar">
+        <div class="nav-brand">🚀 Nhóm Học Tập</div>
+        <div class="nav-links">
+            <a href="index.html">Trang Chủ</a>
+            <a href="thanh-vien.html" class="active">Thành Viên & Thảo Luận</a>
+            <button id="darkModeToggle" class="dark-mode-btn">🌙 Tối</button>
+        </div>
+    </nav>
+
+    <!-- NỘI DUNG TRANG THÀNH VIÊN -->
+    <div class="main-container">
+        <h2>💬 Chuỗi Thảo Luận Nhóm</h2>
+
+        <!-- THẢO LUẬN 1 -->
+        <div class="card-box">
+            <div class="thread-main-author">
+                <img src="https://via.placeholder.com/200" alt="Ảnh Văn A" class="member-avatar-large">
+                
+                <div class="author-content-wrapper">
+                    <button class="toggle-btn" onclick="toggleElement(this)">
+                        <span class="author-title"><strong>Nguyễn Văn A:</strong> "Tiến độ công việc và những khó khăn sắp tới là gì?"</span>
+                        <span class="arrow-icon">&gt;</span>
+                    </button>
+                    
+                    <div class="thread-collapse-content">
+                        
+                        <!-- Phản hồi của Thị B -->
+                        <div class="reply-item">
+                            <button class="toggle-btn" onclick="toggleElement(this)">
+                                <span class="reply-text"><strong>- Thị B:</strong> Câu hỏi rất hay. Vì thời gian rảnh của mỗi người khác nhau...</span>
+                                <span class="arrow-icon">&gt;</span>
+                            </button>
+                            
+                            <div class="thread-collapse-content">
+                                <div class="reply-item sub-reply">
+                                    <button class="toggle-btn" onclick="toggleElement(this)">
+                                        <span class="reply-text"><strong>-- Văn A (phản hồi):</strong> Đúng vậy, thế nên chúng ta cần chốt lịch từ đầu tuần nhé.</span>
+                                        <span class="arrow-icon">&gt;</span>
+                                    </button>
+                                    
+                                    <div class="thread-collapse-content">
+                                        <div class="reply-item sub-reply-deep">
+                                            <div class="reply-text-static"><strong>--- Thị B (phản hồi):</strong> Chuẩn luôn, mình đã note lại và gửi vào nhóm chung rồi!</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Phản hồi của Thái C -->
+                        <div class="reply-item">
+                            <div class="reply-text-static"><strong>- Thái C:</strong> Tôi thấy là tiến độ chung đang khá ổn, cần chú ý kiểm tra lại kỹ lưỡng trước khi nộp.</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

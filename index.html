@@ -3,159 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Web Của Tôi</title>
-    <style>
-        :root {
-            --primary: #6c5ce7;
-            --secondary: #a29bfe;
-            --bg: #f5f6fa;
-            --text: #2d3436;
-            --card-bg: #ffffff;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #74b9ff, #a29bfe);
-            color: var(--text);
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        .container {
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-            max-width: 600px;
-            width: 100%;
-            text-align: center;
-            animation: fadeIn 0.8s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        h1 {
-            color: var(--primary);
-            margin-bottom: 10px;
-        }
-
-        p {
-            color: #636e72;
-            line-height: 1.6;
-        }
-
-        .btn-group {
-            margin: 20px 0;
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            background-color: var(--primary);
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            font-size: 15px;
-            font-weight: bold;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(108, 92, 231, 0.2);
-        }
-
-        .btn:hover {
-            background-color: #5849be;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(108, 92, 231, 0.3);
-        }
-
-        .btn-secondary {
-            background-color: #00b894;
-            box-shadow: 0 4px 6px rgba(0, 184, 148, 0.2);
-        }
-        .btn-secondary:hover {
-            background-color: #019875;
-        }
-
-        /* Phần nội dung ẩn/hiện có hiệu ứng mượt */
-        .content-box {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.5s ease, opacity 0.5s ease;
-            opacity: 0;
-            background: #f8f9fa;
-            border-radius: 8px;
-            text-align: left;
-            padding: 0 15px;
-            margin-top: 10px;
-            border-left: 4px solid var(--primary);
-        }
-
-        .content-box.show {
-            max-height: 200px;
-            opacity: 1;
-            padding: 15px;
-        }
-
-        footer {
-            margin-top: 30px;
-            font-size: 13px;
-            color: #b2bec3;
-        }
-    </style>
+    <title>Trang Chủ - Website Nhóm</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <h1>🚀 Chào mừng đến với trang web của tôi!</h1>
-        <p>Đây là website cá nhân được tạo tự động để lưu trữ thông tin, có các nút bấm tương tác và hiệu ứng chuyển động mượt mà.</p>
-
-        <div class="btn-group">
-            <!-- Nút 1: Hiện/Ẩn thông tin 1 -->
-            <button class="btn" onclick="toggleContent('info1')">💡 Xem thông tin học tập</button>
-            <!-- Nút 2: Hiện/Ẩn thông tin 2 -->
-            <button class="btn btn-secondary" onclick="toggleContent('info2')">🎯 Xem mục tiêu cá nhân</button>
+    <!-- THANH ĐIỀU HƯỚNG (TASKBAR) -->
+    <nav class="navbar">
+        <div class="nav-brand">🚀 Nhóm Học Tập</div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Trang Chủ</a>
+            <a href="thanh-vien.html">Thành Viên & Thảo Luận</a>
+            <button id="darkModeToggle" class="dark-mode-btn">🌙 Tối</button>
         </div>
+    </nav>
 
-        <!-- Khối nội dung 1 -->
-        <div id="info1" class="content-box">
-            <strong>Thông tin học tập:</strong>
-            <p>Đang tìm hiểu và tập tắp làm web, kết hợp giữa tư duy lập trình cơ bản và các công cụ hiện đại.</p>
+    <!-- NỘI DUNG TRANG CHỦ -->
+    <div class="main-container">
+        <div class="card-box">
+            <h1>🌟 Chào mừng đến với Website của Nhóm!</h1>
+            <p>
+                Đây là cổng thông tin chính thức của nhóm chúng tôi. Trang web này được xây dựng hoàn toàn bằng mã nguồn thuần túy, 
+                tốc độ cao, không cần máy chủ phức tạp và có hỗ trợ giao diện Sáng/Tối linh hoạt.
+            </p>
+            <p>
+                Bạn có thể bấm vào mục <strong>"Thành Viên & Thảo Luận"</strong> ở thanh menu phía trên để xem chi tiết các cuộc trao đổi, 
+                đóng góp ý kiến và góc nhìn của từng thành viên trong nhóm.
+            </p>
         </div>
-
-        <!-- Khối nội dung 2 -->
-        <div id="info2" class="content-box">
-            <strong>Mục tiêu:</strong>
-            <p>Xây dựng các trang web cá nhân nhỏ gọn, tốc độ cao, hoàn toàn miễn phí và không phụ thuộc vào máy chủ phức tạp.</p>
-        </div>
-
-        <footer>Được tạo bởi AI & Học sinh Việt Nam • 2026</footer>
     </div>
 
-    <script>
-        function toggleContent(id) {
-            // Đóng tất cả các khối khác trước (nếu muốn)
-            const boxes = document.querySelectorAll('.content-box');
-            boxes.forEach(box => {
-                if (box.id !== id) {
-                    box.classList.remove('show');
-                }
-            });
-
-            // Bật/tắt khối được chọn
-            const target = document.getElementById(id);
-            target.classList.toggle('show');
-        }
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
