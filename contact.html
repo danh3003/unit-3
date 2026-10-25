@@ -11,7 +11,6 @@
             padding: 40px 30px;
         }
         
-        /* Mở rộng khung chứa chính để to hơn, thoáng hơn */
         .main-container {
             max-width: 950px; 
         }
@@ -20,10 +19,11 @@
             margin-top: 30px;
             width: 100%;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
         }
 
-        /* Chiều cao 750px, căn giữa và có bo góc tinh tế */
         .form-container iframe {
             width: 100%;
             max-width: 800px; 
@@ -32,6 +32,17 @@
             border-radius: 14px;
             background: #ffffff;
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        /* Nút dự phòng khi form bị chặn hiển thị */
+        .fallback-box {
+            background: var(--btn-bg);
+            border: 1px dashed var(--border-color);
+            padding: 15px 20px;
+            border-radius: 10px;
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
         }
     </style>
 </head>
@@ -57,17 +68,27 @@
                 Do you have any problems? Need some help or a safe place to share your thoughts? Fill out the form below, and our team will support you!
             </p>
 
-            <!-- KHUNG NHÚNG GOOGLE FORM -->
+            <!-- KHUNG NHÚNG GOOGLE FORM KÈM LINK DỰ PHÒNG -->
             <div class="form-container">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScM1c_h8oC03TfTisXrQEJa_H2_ahdzbLXN9b-lg70PrQ3ncw/viewform?embedded=true" ...></iframe>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScM1c_h8oC03TfTisXrQEJa_H2_ahdzbLXN9b-lg70PrQ3ncw/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                
+                <!-- Hộp thông báo và link dự phòng khi trình duyệt chặn hiển thị iframe -->
+                <div class="fallback-box">
+                    <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 10px;">
+                        ⚠️ Can't see or load the form above due to browser restrictions?
+                    </p>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScM1c_h8oC03TfTisXrQEJa_H2_ahdzbLXN9b-lg70PrQ3ncw/viewform" target="_blank" class="action-btn" style="display: inline-block; padding: 10px 20px; text-decoration: none;">
+                        🔗 Click here to open the Google Form in a new tab &rarr;
+                    </a>
+                </div>
             </div>
 
-            <!-- PHẦN EMAIL ĐÃ ĐƯỢC TỐI ƯU GIAO DIỆN & TƯƠNG PHẢN ĐẸP MẮT -->
+            <!-- PHẦN EMAIL TRỰC TIẾP -->
             <div style="margin-top: 30px; padding-top: 20px; border-top: 1px dashed var(--border-color); text-align: center;">
                 <p style="font-size: 15px; color: var(--text-muted); margin-bottom: 12px;">
                     📬 Prefer a direct message? Reach out to us via email:
                 </p>
-                <a href="mailto:nguyennhandanh300312pro@gmail.com" class="social-btn" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 600; padding: 10px 24px; border-radius: 8px; text-decoration: none;">
+                <a href="mailto:abcd@gmail.com" class="social-btn" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 600; padding: 10px 24px; border-radius: 8px; text-decoration: none;">
                     ✉️ Send an Email to Us
                 </a>
             </div>
