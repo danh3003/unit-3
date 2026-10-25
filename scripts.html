@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problems & Solutions - Unit 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- THANH ĐIỀU HƯỚNG (TASKBAR) -->
+    <nav class="navbar">
+        <div class="nav-brand">❤️ Unit 3 - Class 9/4 ❤️<br>Healthy Living for Teens</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="scripts.html" class="active">Problems & Solutions</a>
+			<a href="news.html">News</a>
+            <button id="darkModeToggle" class="dark-mode-btn">🌙 Tối</button>
+        </div>
+    </nav>
+
+    <!-- NỘI DUNG TRANG THÀNH VIÊN -->
+    <div class="main-container">
+        <h2>Members' Problems</h2>
+
+        <!-- THẢO LUẬN 1 -->
+        <div class="card-box">
+            <div class="thread-main-author">
+                <img src="danh.jpg" alt="Nhân Danh" class="member-avatar-large">
+                
+                <div class="author-content-wrapper">
+                    <button class="toggle-btn" onclick="toggleElement(this)">
+                        <span class="author-title"><strong>Nhân Danh:</strong> "Staying up Late and Waking up Late"</span>
+                        <span class="arrow-icon">&gt;</span>
+                    </button>
+                    
+                    <div class="thread-collapse-content">
+                        
+						<!-- Trọng's Advice -->
+                        <div class="reply-item">
+							<div class="reply-item sub-reply-deep">
+								<strong>Trọng:</strong> You should set an alarm and get up earlier instead of snoozing it.
+								<br>
+								<img src="alarm.jfif" alt="Set an Alarm" style="max-width: 30%; border-radius: 8px; margin-top: 8px;">
+							</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		
+		<!-- THẢO LUẬN 2 -->
+        <div class="card-box">
+            <div class="thread-main-author">
+                <img src="giao.jpg" alt="Quỳnh Giao" class="member-avatar-large">
+                
+                <div class="author-content-wrapper">
+                    <button class="toggle-btn" onclick="toggleElement(this)">
+                        <span class="author-title"><strong>Quỳnh Giao:</strong> "Procastion (the Habit of Delaying)"</span>
+                        <span class="arrow-icon">&gt;</span>
+                    </button>
+                    
+                    <div class="thread-collapse-content">
+                        
+                        <!-- Trọng's Advice -->
+                        <div class="reply-item">
+                            <button class="toggle-btn" onclick="toggleElement(this)">
+                                <span class="reply-text"><strong>Trọng:</strong> Why don't you make a study timetable and start studying earlier?</span>
+								<br>
+								<img src="thoi khoa bieu.jpg" alt="Make a Timetable" style="max-width: 30%; border-radius: 8px; margin-top: 8px;">
+                                <span class="arrow-icon">&gt;</span>
+                            </button>
+                            
+                            <div class="thread-collapse-content">
+                                <div class="reply-item sub-reply">
+                                    <button class="toggle-btn" onclick="toggleElement(this)">
+                                        <span class="reply-text"><strong>Giao:</strong> Sorry? Could you say that again, please?</span>
+                                        <span class="arrow-icon">&gt;</span>
+                                    </button>
+                                    
+                                    <div class="thread-collapse-content">
+                                        <div class="reply-item sub-reply-deep">
+                                            <div class="reply-text-static"><strong>Trọng:</strong> Sure. I said you should make a study timetable and start earlier.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Vy's Advice -->
+                        <div class="reply-item">
+                            <div class="reply-text-static"><strong>Vy:</strong> You should put away your phone while studying.</div>
+                        </div>
+
+                        <!-- Uyên Nhi's Advice -->
+                        <div class="reply-item">
+                            <button class="toggle-btn" onclick="toggleElement(this)">
+                                <span class="reply-text"><strong>Uyên Nhi:</strong> And you can find a study partner to learn together. When we study side by side, we can focus on our lessons easily.</span>
+                                <span class="arrow-icon">&gt;</span>
+                            </button>
+                            
+                            <div class="thread-collapse-content">
+                                <div class="reply-item sub-reply">
+									<div class="reply-text-static"><strong>Giao:</strong> Wow, learning together sounds wonderful!</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- PHẦN KẾT LUẬN NỔI BẬT Ở CUỐI -->
+            <div class="thread-conclusion">
+                <div class="conclusion-title">📌 Giao's Promise:</div>
+                <p class="conclusion-text">
+                    I'll try my best. Thanks, guys!
+                </p>
+            </div>
+        </div>
+		
+		<!-- THẢO LUẬN 3 -->
+        <div class="card-box">
+            <div class="thread-main-author">
+                <img src="vy.jpg" alt="Tường Vy" class="member-avatar-large">
+                
+                <div class="author-content-wrapper">
+                    <button class="toggle-btn" onclick="toggleElement(this)">
+                        <span class="author-title"><strong>Tường Vy:</strong> "Poor Time Management"</span>
+                        <span class="arrow-icon">&gt;</span>
+                    </button>
+                    
+                    <div class="thread-collapse-content">
+                        
+                        <!-- Danh's Advice -->
+                        <div class="reply-item">
+                            <button class="toggle-btn" onclick="toggleElement(this)">
+                                <span class="reply-text"><strong>Danh:</strong> You should make a daily to-do list and prioritize important tasks.</span>
+								<br>
+								<img src="to-do list.jfif" alt="Daily To-Do List" style="max-width: 30%; border-radius: 8px; margin-top: 8px;">
+                                <span class="arrow-icon">&gt;</span>
+                            </button>
+                            
+                            <div class="thread-collapse-content">
+								<div class="reply-item sub-reply">
+									<div class="reply-text-static"><strong>Tường Vy:</strong> That sounds helpful!</div>
+								</div>
+                            </div>
+                        </div>
+
+                        <!-- Giao's Advice -->
+                        <div class="reply-item">
+                            <div class="reply-text-static"><strong>Giao:</strong> You should play games less and finish your homework before playing.</div>
+                        </div>
+						
+						<!-- Trọng's Advice -->
+                        <div class="reply-item">
+                            <button class="toggle-btn" onclick="toggleElement(this)">
+                                <span class="reply-text"><strong>Trọng:</strong> You can also try using the Pomodoro technique.</span>
+                                <span class="arrow-icon">&gt;</span>
+                            </button>
+                            
+                            <div class="thread-collapse-content">
+                                <div class="reply-item sub-reply">
+                                    <button class="toggle-btn" onclick="toggleElement(this)">
+                                        <span class="reply-text"><strong>Tường Vy:</strong> I beg your pardon? What is a Pomodoro?</span>
+                                        <span class="arrow-icon">&gt;</span>
+                                    </button>
+                                    
+                                    <div class="thread-collapse-content">
+                                        <div class="reply-item sub-reply-deep">
+                                            <div class="reply-text-static">
+												<strong>Trọng:</strong> Sure. I said you study hard for 25 minutes, then take a short break to relax.
+												<br>
+												<img src="pomodoro.jfif" alt="Pomodoro technique" style="max-width: 30%; border-radius: 8px; margin-top: 8px;">
+											</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- PHẦN KẾT LUẬN NỔI BẬT Ở CUỐI -->
+            <div class="thread-conclusion">
+                <div class="conclusion-title">📌 Vy's Promise:</div>
+                <p class="conclusion-text">
+                    I'll try to manage my time better.
+                </p>
+            </div>
+        </div>
+
+		<!-- THẢO LUẬN 4 -->
+        <div class="card-box">
+            <div class="thread-main-author">
+                <img src="uyen nhi.jpg" alt="Uyên Nhi" class="member-avatar-large">
+                
+                <div class="author-content-wrapper">
+                    <button class="toggle-btn" onclick="toggleElement(this)">
+                        <span class="author-title"><strong>Uyên Nhi:</strong> "An Unbalanced Diet"</span>
+                        <span class="arrow-icon">&gt;</span>
+                    </button>
+                    
+                    <div class="thread-collapse-content">
+                        
+                        <!-- Thịnh's Advice -->
+                        <div class="reply-item">
+                            <button class="toggle-btn" onclick="toggleElement(this)">
+                                <span class="reply-text"><strong>Thịnh:</strong> You should eat more fruits and vegetables to stay healthy.</span>
+								<br>
+								<img src="vege-fruit.jpg" alt="More Fruits and Vegetables" style="max-width: 30%; border-radius: 8px; margin-top: 8px;">
+                                <span class="arrow-icon">&gt;</span>
+                            </button>
+                            
+                            <div class="thread-collapse-content">
+                                <div class="reply-item sub-reply">
+									<div class="reply-text-static"><strong>Uyên Nhi:</strong> But what else can I do? I always eat fast food when I'm stressed.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Vy's Advice -->
+                        <div class="reply-item">
+                            <div class="reply-text-static"><strong>Vy:</strong> You should exercise for about 30 minutes a day and eat fewer processed foods.</div>
+                        </div>
+						
+						<!-- Giao's Advice -->
+                        <div class="reply-item">
+                            <div class="reply-text-static"><strong>Giao:</strong> And you should try to take care of your body better by cooking fresh meals at home.</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- PHẦN KẾT LUẬN NỔI BẬT Ở CUỐI -->
+            <div class="thread-conclusion">
+                <div class="conclusion-title">📌 Uyên Nhi's Promise:</div>
+                <p class="conclusion-text">
+                    I'll try to be happy, eat healthy food, and live better. Thank you, everyone!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -236,3 +236,44 @@ p {
         margin-left: 10px;
     }
 }
+
+/* ==========================================
+   PHẦN KẾT LUẬN / TÓM TẮT CHUỖI THẢO LUẬN
+   ========================================== */
+.thread-conclusion {
+    margin-top: 20px;
+    padding: 16px 20px;
+    background: linear-gradient(135deg, #eff6ff, #dbeafe); /* Nền chuyển màu nhẹ nhàng, bắt mắt */
+    border: 1px solid #93c5fd;
+    border-left: 6px solid var(--primary-color); /* Viền trái đậm tạo điểm nhấn */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.08);
+}
+
+/* Khi ở chế độ Dark Mode, phần kết luận tự động chuyển màu tối dịu mắt */
+body.dark-mode .thread-conclusion {
+    background: linear-gradient(135deg, #1e3a8a, #172554);
+    border-color: #3b82f6;
+    border-left-color: #60a5fa;
+}
+
+.conclusion-title {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 15px;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+body.dark-mode .conclusion-title {
+    color: #60a5fa;
+}
+
+.conclusion-text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-main);
+    margin: 0;
+}

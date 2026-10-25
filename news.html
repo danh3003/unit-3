@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS riêng bổ sung cho trang Bản tin (News) */
+        .news-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .news-card {
+            background: var(--card-background);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .news-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+        }
+
+        .news-date {
+            font-size: 13px;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .news-title {
+            font-size: 20px;
+            color: var(--text-main);
+            margin-top: 0;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .news-excerpt {
+            font-size: 15px;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Nút đọc bản tin chi tiết (nếu muốn mở rộng sau) */
+        .news-btn {
+            display: inline-block;
+            background: var(--btn-bg);
+            color: var(--text-main);
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            border: 1px solid var(--border-color);
+            transition: background 0.2s;
+        }
+
+        .news-btn:hover {
+            background: var(--primary-color);
+            color: #ffffff;
+            border-color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- THANH ĐIỀU HƯỚNG (TASKBAR) - Đã cập nhật đủ 3 trang -->
+    <nav class="navbar">
+        <div class="nav-brand">❤️ Unit 3 - Class 9/4 ❤️<br>Healthy Living for Teens</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="scripts.html">Problems & Solutions</a>
+            <a href="news.html" class="active">News</a>
+            <button id="darkModeToggle" class="dark-mode-btn">🌙 Tối</button>
+        </div>
+    </nav>
+
+    <!-- NỘI DUNG TRANG BẢN TIN -->
+    <main class="main-container">
+        <div class="card-box" style="border-top: 5px solid var(--primary-color);">
+            <h1>📰 Bản Tin & Cập Nhật Dự Án</h1>
+            <p>Nơi tổng hợp các thông tin chính thống, các bài viết phân tích vấn đề và thông báo quan trọng trong suốt quá trình triển khai công việc của nhóm.</p>
+        </div>
+
+        <!-- DANH SÁCH CÁC BẢN TIN -->
+        <div class="news-grid">
+
+            <!-- Bản tin số 1 -->
+            <article class="news-card">
+                <div class="news-date">📅 26 Tháng 10, 2026 • Bản tin tuần 1</div>
+                <h2 class="news-title">Tổng kết vấn đề: Thống nhất tiến độ và phương án khắc phục khó khăn thời gian</h2>
+                <p class="news-excerpt">
+                    Sau phiên thảo luận căng thẳng nhưng hiệu quả giữa các thành viên, nhóm đã nhận diện rõ điểm nghẽn về việc lệch lịch rảnh cá nhân. Giải pháp chốt lịch từ đầu tuần qua kênh thông tin chung đã chính thức được phê duyệt áp dụng.
+                </p>
+                <a href="scripts.html" class="news-btn">Xem chi tiết thảo luận &rarr;</a>
+            </article>
+
+            <!-- Bản tin số 2 -->
+            <article class="news-card">
+                <div class="news-date">📅 25 Tháng 10, 2026 • Định hướng kỹ thuật</div>
+                <h2 class="news-title">Tiêu chuẩn hóa mã nguồn: Hướng tới một sản phẩm gọn gàng và tối ưu</h2>
+                <p class="news-excerpt">
+                    Nhóm thống nhất nguyên tắc code sạch, tách bạch rõ ràng cấu trúc file (HTML, CSS, JS) để dễ dàng bảo trì, nâng cấp tính năng Dark Mode và khả năng tương thích trên các thiết bị di động mà không phụ thuộc vào máy chủ.
+                </p>
+                <a href="scripts.html" class="news-btn">Xem chi tiết thảo luận &rarr;</a>
+            </article>
+
+            <!-- Bản tin số 3 (Bạn có thể tự thêm các bản tin tiếp theo ở đây) -->
+            <article class="news-card">
+                <div class="news-date">📅 24 Tháng 10, 2026 • Khởi động dự án</div>
+                <h2 class="news-title">Kế hoạch triển khai website cá nhân và nhóm hoàn toàn miễn phí trên GitHub</h2>
+                <p class="news-excerpt">
+                    Dự án chính thức được khởi động nhằm tạo ra một không gian lưu trữ thông tin học tập an toàn, tốc độ cao, không cần cơ sở dữ liệu phức tạp nhưng vẫn đảm bảo tính thẩm mỹ và hiện đại.
+                </p>
+                <a href="index.html" class="news-btn">Về trang chủ &rarr;</a>
+            </article>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
