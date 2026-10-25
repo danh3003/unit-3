@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News - Home</title>
+    <title>News & Realities - Healthy Living for Teens</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* CSS riêng bổ sung cho trang Bản tin (News) */
         .news-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -51,7 +50,6 @@
             margin-bottom: 20px;
         }
 
-        /* Nút đọc bản tin chi tiết (nếu muốn mở rộng sau) */
         .news-btn {
             display: inline-block;
             background: var(--btn-bg);
@@ -74,55 +72,56 @@
 </head>
 <body>
 
-    <!-- THANH ĐIỀU HƯỚNG (TASKBAR) - Đã cập nhật đủ 3 trang -->
+    <!-- THANH ĐIỀU HƯỚNG (TASKBAR) -->
     <nav class="navbar">
         <div class="nav-brand">❤️ Unit 3 - Class 9/4 ❤️<br>Healthy Living for Teens</div>
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="scripts.html">Problems & Solutions</a>
             <a href="news.html" class="active">News</a>
-            <button id="darkModeToggle" class="dark-mode-btn">🌙 Tối</button>
+			<a href="contact.html">Contact</a>
+            <button id="darkModeToggle" class="dark-mode-btn">🌙 Dark</button>
         </div>
     </nav>
 
     <!-- NỘI DUNG TRANG BẢN TIN -->
     <main class="main-container">
         <div class="card-box" style="border-top: 5px solid var(--primary-color);">
-            <h1>📰 Bản Tin & Cập Nhật Dự Án</h1>
-            <p>Nơi tổng hợp các thông tin chính thống, các bài viết phân tích vấn đề và thông báo quan trọng trong suốt quá trình triển khai công việc của nhóm.</p>
+            <h1>📰 News & Teen Realities</h1>
+            <p>A place to update hot news, health facts, and useful tips for teens.</p>
         </div>
 
-        <!-- DANH SÁCH CÁC BẢN TIN -->
+        <!-- DANH SÁCH CÁC BẢN TIN (NÂNG CẤP CHUẨN B1) -->
         <div class="news-grid">
 
-            <!-- Bản tin số 1 -->
+            <!-- Bản tin số 1: Trì hoãn -->
             <article class="news-card">
-                <div class="news-date">📅 26 Tháng 10, 2026 • Bản tin tuần 1</div>
-                <h2 class="news-title">Tổng kết vấn đề: Thống nhất tiến độ và phương án khắc phục khó khăn thời gian</h2>
+                <div class="news-date">📅 Academic Habit & Lifestyle</div>
+                <h2 class="news-title">Understanding Procrastination: Why Teens Delay Their Studies</h2>
                 <p class="news-excerpt">
-                    Sau phiên thảo luận căng thẳng nhưng hiệu quả giữa các thành viên, nhóm đã nhận diện rõ điểm nghẽn về việc lệch lịch rảnh cá nhân. Giải pháp chốt lịch từ đầu tuần qua kênh thông tin chung đã chính thức được phê duyệt áp dụng.
+                    Many young individuals frequently postpone essential tasks until the final moment, often getting distracted by digital notifications. This habit triggers heavy psychological pressure prior to exams. Establishing a structured schedule and collaborating with a study partner are proven methods to overcome this challenge.
                 </p>
-                <a href="scripts.html" class="news-btn">Xem chi tiết thảo luận &rarr;</a>
+                <a href="https://baothanhhoa.vn/thoi-quen-tri-hoan-o-nguoi-tre-281775.htm" target="_blank" class="news-btn">Read original article (Vietnamese) &rarr;</a>
             </article>
 
-            <!-- Bản tin số 2 -->
+            <!-- Bản tin số 2: Pomodoro -->
             <article class="news-card">
-                <div class="news-date">📅 25 Tháng 10, 2026 • Định hướng kỹ thuật</div>
-                <h2 class="news-title">Tiêu chuẩn hóa mã nguồn: Hướng tới một sản phẩm gọn gàng và tối ưu</h2>
+                <div class="news-date">📅 Time Management Strategies</div>
+                <h2 class="news-title">Maximizing Productivity Through the Pomodoro Technique</h2>
                 <p class="news-excerpt">
-                    Nhóm thống nhất nguyên tắc code sạch, tách bạch rõ ràng cấu trúc file (HTML, CSS, JS) để dễ dàng bảo trì, nâng cấp tính năng Dark Mode và khả năng tương thích trên các thiết bị di động mà không phụ thuộc vào máy chủ.
+                    Feeling overwhelmed by lengthy study sessions? The Pomodoro method offers an effective solution by alternating 25 minutes of deep focus with brief 5-minute intervals of rest. This approach prevents mental exhaustion and enhances overall efficiency.
                 </p>
-                <a href="scripts.html" class="news-btn">Xem chi tiết thảo luận &rarr;</a>
+                <a href="https://base.vn/blog/pomodoro-la-gi/" target="_blank" class="news-btn">Read original article (Vietnamese) &rarr;</a>
             </article>
 
-            <!-- Bản tin số 3 (Bạn có thể tự thêm các bản tin tiếp theo ở đây) -->
+            <!-- Bản tin số 3: Đồ ăn nhanh & Béo phì -->
             <article class="news-card">
-                <div class="news-date">📅 24 Tháng 10, 2026 • Khởi động dự án</div>
-                <h2 class="news-title">Kế hoạch triển khai website cá nhân và nhóm hoàn toàn miễn phí trên GitHub</h2>
+                <div class="news-date">📅 Nutrition & Public Health</div>
+                <h2 class="news-title">An Alarming Increase: Over 40% of Students in HCMC Face Obesity</h2>
                 <p class="news-excerpt">
-                    Dự án chính thức được khởi động nhằm tạo ra một không gian lưu trữ thông tin học tập an toàn, tốc độ cao, không cần cơ sở dữ liệu phức tạp nhưng vẫn đảm bảo tính thẩm mỹ và hiện đại.
+                    Recent data reveals that more than 40 percent of students in Ho Chi Minh City struggle with being overweight, largely driven by the consumption of fast food and sugary beverages. Experts strongly encourage adolescents to adopt a balanced diet rich in fresh produce and engage in regular physical activity.
                 </p>
-                <a href="index.html" class="news-btn">Về trang chủ &rarr;</a>
+                <a href="https://tuoitre.vn/hon-40-hoc-sinh-tp-hcm-thua-can-beo-phi-diem-ten-tra-sua-nuoc-ngot-do-an-nhanh-20260312143419591.htm" target="_blank" class="news-btn">Read original article (Vietnamese) &rarr;</a>
             </article>
 
         </div>

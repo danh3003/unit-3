@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Share - Healthy Living for Teens</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-box {
+            text-align: center;
+            padding: 40px 30px;
+        }
+        
+        /* Mở rộng khung chứa chính để to hơn, thoáng hơn */
+        .main-container {
+            max-width: 950px; 
+        }
+
+        .form-container {
+            margin-top: 30px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Chiều cao 750px, căn giữa và có bo góc tinh tế */
+        .form-container iframe {
+            width: 100%;
+            max-width: 800px; 
+            height: 750px; 
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            background: #ffffff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- THANH ĐIỀU HƯỚNG (TASKBAR) -->
+    <nav class="navbar">
+        <div class="nav-brand">❤️ Unit 3 - Class 9/4 ❤️<br>Healthy Living for Teens</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="scripts.html">Problems & Solutions</a>
+            <a href="news.html">News</a>
+            <a href="contact.html" class="active">Contact</a>
+            <button id="darkModeToggle" class="dark-mode-btn">🌙 Dark</button>
+        </div>
+    </nav>
+
+    <!-- NỘI DUNG TRANG LIÊN HỆ & GOOGLE FORM -->
+    <main class="main-container">
+        <div class="card-box contact-box" style="border-top: 6px solid var(--primary-color);">
+            <h1 style="font-size: 28px; margin-bottom: 12px;">💌 We Are Here to Listen to You!</h1>
+            <p style="font-size: 17px; max-width: 700px; margin: 0 auto; color: var(--text-muted); line-height: 1.6;">
+                Do you have any problems? Need some help or a safe place to share your thoughts? Fill out the form below, and our team will support you!
+            </p>
+
+            <!-- KHUNG NHÚNG GOOGLE FORM -->
+            <div class="form-container">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScM1c_h8oC03TfTisXrQEJa_H2_ahdzbLXN9b-lg70PrQ3ncw/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div>
+
+            <!-- PHẦN EMAIL ĐÃ ĐƯỢC TỐI ƯU GIAO DIỆN & TƯƠNG PHẢN ĐẸP MẮT -->
+            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px dashed var(--border-color); text-align: center;">
+                <p style="font-size: 15px; color: var(--text-muted); margin-bottom: 12px;">
+                    📬 Prefer a direct message? Reach out to us via email:
+                </p>
+                <a href="mailto:nguyennhandanh300312pro@gmail.com" class="social-btn" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 600; padding: 10px 24px; border-radius: 8px; text-decoration: none;">
+                    ✉️ Send an Email to Us
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -3,36 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Chủ - Unit 3</title>
+    <title>Home - Healthy Living for Teens</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS riêng tinh chỉnh cho trang chủ thêm phần sinh động */
+        .hero-section {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .hero-title {
+            font-size: 32px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        .hero-subtitle {
+            font-size: 18px;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .feature-card {
+            background: var(--card-background);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+        }
+        .feature-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        .feature-card p {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .action-btn {
+            display: inline-block;
+            background: var(--btn-bg);
+            color: var(--text-main);
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            border: 1px solid var(--border-color);
+            transition: background 0.2s, color 0.2s;
+        }
+        .action-btn:hover {
+            background: var(--primary-color);
+            color: #ffffff;
+            border-color: var(--primary-color);
+        }
+    </style>
 </head>
 <body>
 
     <!-- THANH ĐIỀU HƯỚNG (TASKBAR) -->
     <nav class="navbar">
-        <div class="nav-brand">🚀 Nhóm Học Tập</div>
+        <div class="nav-brand">❤️ Unit 3 - Class 9/4 ❤️<br>Healthy Living for Teens</div>
         <div class="nav-links">
-            <a href="index.html" class="active">Trang Chủ</a>
-            <a href="scripts.html">Thành Viên & Thảo Luận</a>
-			<a href="news.html">Bản Tin</a>
-            <button id="darkModeToggle" class="dark-mode-btn">🌙 Tối</button>
+            <a href="index.html" class="active">Home</a>
+            <a href="scripts.html">Problems & Solutions</a>
+            <a href="news.html">News</a>
+            <a href="contact.html">Contact</a>
+            <button id="darkModeToggle" class="dark-mode-btn">🌙 Dark</button>
         </div>
     </nav>
 
     <!-- NỘI DUNG TRANG CHỦ -->
-    <div class="main-container">
-        <div class="card-box">
-            <h1>🌟 Chào mừng đến với Website của Nhóm!</h1>
-            <p>
-                Đây là cổng thông tin chính thức của nhóm chúng tôi. Trang web này được xây dựng hoàn toàn bằng mã nguồn thuần túy, 
-                tốc độ cao, không cần máy chủ phức tạp và có hỗ trợ giao diện Sáng/Tối linh hoạt.
-            </p>
-            <p>
-                Bạn có thể bấm vào mục <strong>"Thành Viên & Thảo Luận"</strong> ở thanh menu phía trên để xem chi tiết các cuộc trao đổi, 
-                đóng góp ý kiến và góc nhìn của từng thành viên trong nhóm.
+    <main class="main-container">
+        <div class="card-box hero-section" style="border-top: 5px solid var(--primary-color);">
+            <h1 class="hero-title">🌟 Welcome to Our Project Website!</h1>
+            <p class="hero-subtitle">
+                Exploring <strong>Unit 3: Healthy Living for Teens</strong> — Discovering common adolescent challenges, practical solutions, and building a healthier lifestyle together.
             </p>
         </div>
-    </div>
+
+        <!-- CÁC KHỐI ĐIỀU HƯỚNG NHANH (QUICK CARDS) - ĐÃ ĐỦ 3 TRANG -->
+        <div class="feature-grid">
+            
+            <!-- Khối 1: Problems & Solutions -->
+            <div class="feature-card">
+                <h3>💬 Problems & Solutions</h3>
+                <p>Explore our group discussions, member advice, and smart ways to deal with daily teenage issues.</p>
+                <a href="scripts.html" class="action-btn">View Scripts &rarr;</a>
+            </div>
+
+            <!-- Khối 2: News & Realities -->
+            <div class="feature-card">
+                <h3>📰 News & Realities</h3>
+                <p>Read hot updates, real-life statistics on procrastination, time management, and balanced diets.</p>
+                <a href="news.html" class="action-btn">Read News &rarr;</a>
+            </div>
+
+            <!-- Khối 3: Contact Us (Mới thêm) -->
+            <div class="feature-card">
+                <h3>💌 Contact & Share</h3>
+                <p>Do you have any problems or need someone to talk to? Share your thoughts with our team via the form.</p>
+                <a href="contact.html" class="action-btn">Get in Touch &rarr;</a>
+            </div>
+
+        </div>
+    </main>
 
     <script src="script.js"></script>
 </body>

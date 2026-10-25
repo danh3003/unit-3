@@ -12,13 +12,15 @@ function toggleElement(button) {
     }
 }
 
-// 2. Xử lý chế độ Dark Mode / Light Mode có ghi nhớ trạng thái
+// 2. Xử lý chế độ Dark Mode / Light Mode có ghi nhớ trạng thái (Chuẩn logic biểu tượng & Tiếng Anh)
 const darkModeBtn = document.getElementById('darkModeToggle');
 
 // Kiểm tra xem người dùng đã từng bật dark mode trước đó chưa
 if (localStorage.getItem('theme') === 'dark') {
     document.body.classList.add('dark-mode');
-    if (darkModeBtn) darkModeBtn.textContent = '☀️ Sáng';
+    if (darkModeBtn) darkModeBtn.textContent = '☀️ Light'; // Đang ở Dark thì hiển thị nút chuyển về Light
+} else {
+    if (darkModeBtn) darkModeBtn.textContent = '🌙 Dark'; // Đang ở Light thì hiển thị nút chuyển sang Dark
 }
 
 if (darkModeBtn) {
@@ -27,10 +29,10 @@ if (darkModeBtn) {
         
         if (document.body.classList.contains('dark-mode')) {
             localStorage.setItem('theme', 'dark');
-            darkModeBtn.textContent = '☀️ Sáng';
+            darkModeBtn.textContent = '☀️ Light'; // Đang ở Dark, bấm để về Light
         } else {
             localStorage.setItem('theme', 'light');
-            darkModeBtn.textContent = '🌙 Tối';
+            darkModeBtn.textContent = '🌙 Dark'; // Đang ở Light, bấm để sang Dark
         }
     });
 }

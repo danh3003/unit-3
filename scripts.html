@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Problems & Solutions - Unit 3</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS bổ sung tinh chỉnh riêng cho trang Scripts để hiển thị cực đẹp và gọn gàng */
+        .problem-img {
+            max-width: 240px;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: block;
+        }
+        .reply-content-box {
+            margin-top: 6px;
+            margin-bottom: 6px;
+        }
+    </style>
 </head>
 <body>
 
@@ -14,19 +30,20 @@
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="scripts.html" class="active">Problems & Solutions</a>
-			<a href="news.html">News</a>
-            <button id="darkModeToggle" class="dark-mode-btn">🌙 Tối</button>
+            <a href="news.html">News</a>
+			<a href="contact.html">Contact</a>
+            <button id="darkModeToggle" class="dark-mode-btn">🌙 Dark</button>
         </div>
     </nav>
 
     <!-- NỘI DUNG TRANG THÀNH VIÊN -->
     <div class="main-container">
-        <h2>Members' Problems</h2>
+        <h2>Members' Problems & Solutions</h2>
 
-        <!-- THẢO LUẬN 1 -->
+        <!-- THẢO LUẬN 1: DANH -->
         <div class="card-box">
             <div class="thread-main-author">
-                <img src="danh.jpg" alt="Nhân Danh" class="member-avatar-large">
+                <img src="media/danh.jpg" alt="Nhân Danh" class="member-avatar-large">
                 
                 <div class="author-content-wrapper">
                     <button class="toggle-btn" onclick="toggleElement(this)">
@@ -35,28 +52,27 @@
                     </button>
                     
                     <div class="thread-collapse-content">
-                        
-						<!-- Trọng's Advice -->
+                        <!-- Trọng's Advice -->
                         <div class="reply-item">
-							<div class="reply-item sub-reply-deep">
-								<strong>Trọng:</strong> You should set an alarm and get up earlier instead of snoozing it.
-								<br>
-								<img src="alarm.jfif" alt="Set an Alarm" style="max-width: 30%; border-radius: 8px; margin-top: 8px;">
-							</div>
+                            <div class="reply-content-box">
+                                <strong>Trọng:</strong> You should set an alarm and get up earlier instead of snoozing it.
+                                <br>
+                                <img src="media/alarm.jfif" alt="Set an Alarm" class="problem-img">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-		
-		<!-- THẢO LUẬN 2 -->
+        
+        <!-- THẢO LUẬN 2: GIAO -->
         <div class="card-box">
             <div class="thread-main-author">
-                <img src="giao.jpg" alt="Quỳnh Giao" class="member-avatar-large">
+                <img src="media/giao.jpg" alt="Quỳnh Giao" class="member-avatar-large">
                 
                 <div class="author-content-wrapper">
                     <button class="toggle-btn" onclick="toggleElement(this)">
-                        <span class="author-title"><strong>Quỳnh Giao:</strong> "Procastion (the Habit of Delaying)"</span>
+                        <span class="author-title"><strong>Quỳnh Giao:</strong> "Procrastination (the Habit of Delaying)"</span>
                         <span class="arrow-icon">&gt;</span>
                     </button>
                     
@@ -66,13 +82,14 @@
                         <div class="reply-item">
                             <button class="toggle-btn" onclick="toggleElement(this)">
                                 <span class="reply-text"><strong>Trọng:</strong> Why don't you make a study timetable and start studying earlier?</span>
-								<br>
-								<img src="thoi khoa bieu.jpg" alt="Make a Timetable" style="max-width: 30%; border-radius: 8px; margin-top: 8px;">
                                 <span class="arrow-icon">&gt;</span>
                             </button>
                             
                             <div class="thread-collapse-content">
                                 <div class="reply-item sub-reply">
+                                    <div class="reply-content-box">
+                                        <img src="media/thoi khoa bieu.jpg" alt="Make a Timetable" class="problem-img">
+                                    </div>
                                     <button class="toggle-btn" onclick="toggleElement(this)">
                                         <span class="reply-text"><strong>Giao:</strong> Sorry? Could you say that again, please?</span>
                                         <span class="arrow-icon">&gt;</span>
@@ -101,7 +118,7 @@
                             
                             <div class="thread-collapse-content">
                                 <div class="reply-item sub-reply">
-									<div class="reply-text-static"><strong>Giao:</strong> Wow, learning together sounds wonderful!</div>
+                                    <div class="reply-text-static"><strong>Giao:</strong> Wow, learning together sounds wonderful!</div>
                                 </div>
                             </div>
                         </div>
@@ -118,11 +135,11 @@
                 </p>
             </div>
         </div>
-		
-		<!-- THẢO LUẬN 3 -->
+        
+        <!-- THẢO LUẬN 3: VY -->
         <div class="card-box">
             <div class="thread-main-author">
-                <img src="vy.jpg" alt="Tường Vy" class="member-avatar-large">
+                <img src="media/vy.jpg" alt="Tường Vy" class="member-avatar-large">
                 
                 <div class="author-content-wrapper">
                     <button class="toggle-btn" onclick="toggleElement(this)">
@@ -136,15 +153,16 @@
                         <div class="reply-item">
                             <button class="toggle-btn" onclick="toggleElement(this)">
                                 <span class="reply-text"><strong>Danh:</strong> You should make a daily to-do list and prioritize important tasks.</span>
-								<br>
-								<img src="to-do list.jfif" alt="Daily To-Do List" style="max-width: 30%; border-radius: 8px; margin-top: 8px;">
                                 <span class="arrow-icon">&gt;</span>
                             </button>
                             
                             <div class="thread-collapse-content">
-								<div class="reply-item sub-reply">
-									<div class="reply-text-static"><strong>Tường Vy:</strong> That sounds helpful!</div>
-								</div>
+                                <div class="reply-item sub-reply">
+                                    <div class="reply-content-box">
+                                        <img src="media/to-do list.jfif" alt="Daily To-Do List" class="problem-img">
+                                    </div>
+                                    <div class="reply-text-static"><strong>Tường Vy:</strong> That sounds helpful!</div>
+                                </div>
                             </div>
                         </div>
 
@@ -152,8 +170,8 @@
                         <div class="reply-item">
                             <div class="reply-text-static"><strong>Giao:</strong> You should play games less and finish your homework before playing.</div>
                         </div>
-						
-						<!-- Trọng's Advice -->
+                        
+                        <!-- Trọng's Advice -->
                         <div class="reply-item">
                             <button class="toggle-btn" onclick="toggleElement(this)">
                                 <span class="reply-text"><strong>Trọng:</strong> You can also try using the Pomodoro technique.</span>
@@ -170,10 +188,10 @@
                                     <div class="thread-collapse-content">
                                         <div class="reply-item sub-reply-deep">
                                             <div class="reply-text-static">
-												<strong>Trọng:</strong> Sure. I said you study hard for 25 minutes, then take a short break to relax.
-												<br>
-												<img src="pomodoro.jfif" alt="Pomodoro technique" style="max-width: 30%; border-radius: 8px; margin-top: 8px;">
-											</div>
+                                                <strong>Trọng:</strong> Sure. I said you study hard for 25 minutes, then take a short break to relax.
+                                                <br>
+                                                <img src="media/pomodoro.jfif" alt="Pomodoro technique" class="problem-img">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -193,10 +211,10 @@
             </div>
         </div>
 
-		<!-- THẢO LUẬN 4 -->
+        <!-- THẢO LUẬN 4: UYÊN NHI -->
         <div class="card-box">
             <div class="thread-main-author">
-                <img src="uyen nhi.jpg" alt="Uyên Nhi" class="member-avatar-large">
+                <img src="media/uyen nhi.jpg" alt="Uyên Nhi" class="member-avatar-large">
                 
                 <div class="author-content-wrapper">
                     <button class="toggle-btn" onclick="toggleElement(this)">
@@ -210,14 +228,15 @@
                         <div class="reply-item">
                             <button class="toggle-btn" onclick="toggleElement(this)">
                                 <span class="reply-text"><strong>Thịnh:</strong> You should eat more fruits and vegetables to stay healthy.</span>
-								<br>
-								<img src="vege-fruit.jpg" alt="More Fruits and Vegetables" style="max-width: 30%; border-radius: 8px; margin-top: 8px;">
                                 <span class="arrow-icon">&gt;</span>
                             </button>
                             
                             <div class="thread-collapse-content">
                                 <div class="reply-item sub-reply">
-									<div class="reply-text-static"><strong>Uyên Nhi:</strong> But what else can I do? I always eat fast food when I'm stressed.</div>
+                                    <div class="reply-content-box">
+                                        <img src="media/vege-fruit.jpg" alt="More Fruits and Vegetables" class="problem-img">
+                                    </div>
+                                    <div class="reply-text-static"><strong>Uyên Nhi:</strong> But what else can I do? I always eat fast food when I'm stressed.</div>
                                 </div>
                             </div>
                         </div>
@@ -226,8 +245,8 @@
                         <div class="reply-item">
                             <div class="reply-text-static"><strong>Vy:</strong> You should exercise for about 30 minutes a day and eat fewer processed foods.</div>
                         </div>
-						
-						<!-- Giao's Advice -->
+                        
+                        <!-- Giao's Advice -->
                         <div class="reply-item">
                             <div class="reply-text-static"><strong>Giao:</strong> And you should try to take care of your body better by cooking fresh meals at home.</div>
                         </div>
@@ -243,6 +262,14 @@
                     I'll try to be happy, eat healthy food, and live better. Thank you, everyone!
                 </p>
             </div>
+        </div>
+		<!-- PHẦN MỞ RỘNG DÀNH CHO KHÁN GIẢ (TEEN AUDIENCE) -->
+        <div class="card-box" style="text-align: center; border-left: 5px solid var(--primary-color); margin-top: 30px;">
+            <h3 style="color: var(--primary-color); margin-bottom: 10px;">💡 What about you?</h3>
+            <p style="font-size: 15px; color: var(--text-muted); margin-bottom: 15px;">
+                We’ve shared our problems and solutions, but what about yours? Do you have any problems? Need some help or a listening ear?
+            </p>
+            <a href="contact.html" class="action-btn" style="display: inline-block; background: var(--primary-color); color: #fff; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600;">Contact Us & Share With Us &rarr;</a>
         </div>
     </div>
 
